@@ -40,19 +40,13 @@ I'm a passionate developer with a strong focus on web development. I have experi
 ### [YouTube Clone](https://github.com/Priyanshu-Bhriguvanshi/YouTubeClone)
 A project aimed at replicating the core features of YouTube, developed using modern web technologies.
 
-### [Restaurant Menu](https://github.com/Priyanshu-Bhriguvanshi/Restaurant-Menu)
-A simple restaurant menu webpage created using HTML and CSS. It showcases a variety of food items with their descriptions and prices.
-
-### [HTML & CSS Single Page](https://github.com/Priyanshu-Bhriguvanshi/htmlCssProject)
-A simple single-page project created using HTML and CSS. The project is a static web page demonstrating basic HTML and CSS skills.
-
 ## 📈 LeetCode Profile
 
 You can check out my LeetCode profile [here](https://leetcode.com/u/Priyanshu_Bhriguvanshi/).
 
-- **Easy Problems**: [Number of Easy Problems Solved]
-- **Medium Problems**: [Number of Medium Problems Solved]
-- **Hard Problems**: [Number of Hard Problems Solved]
+- **Easy Problems**: <!--leetcode-easy-->0<!--leetcode-easy-->
+- **Medium Problems**: <!--leetcode-medium-->0<!--leetcode-medium-->
+- **Hard Problems**: <!--leetcode-hard-->0<!--leetcode-hard-->
 
 ## 📫 Connect with Me
 
