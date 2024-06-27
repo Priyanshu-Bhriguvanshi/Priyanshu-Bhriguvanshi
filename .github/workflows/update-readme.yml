@@ -17,13 +17,19 @@ jobs:
       - name: Fetch LeetCode Stats
         id: fetch_leetcode
         run: |
-          curl -s "https://leetcode-stats-api.herokuapp.com/u/Priyanshu_Bhriguvanshi" > leetcode_stats.json
+          curl -s "https://leetcode-api-faisalshohag.vercel.app/Priyanshu_Bhriguvanshi/" > leetcode_stats.json
+          echo "Easy solved: $(jq '.easySolved' leetcode_stats.json)"
+          echo "Medium solved: $(jq '.mediumSolved' leetcode_stats.json)"
+          echo "Hard solved: $(jq '.hardSolved' leetcode_stats.json)"
 
       - name: Update README
         run: |
-          sed -i "s/<!--leetcode-easy-->.*<!--leetcode-easy-->/<!--leetcode-easy-->\n$(jq '.easySolved' leetcode_stats.json)<!--leetcode-easy-->/" README.md
-          sed -i "s/<!--leetcode-medium-->.*<!--leetcode-medium-->/<!--leetcode-medium-->\n$(jq '.mediumSolved' leetcode_stats.json)<!--leetcode-medium-->/" README.md
-          sed -i "s/<!--leetcode-hard-->.*<!--leetcode-hard-->/<!--leetcode-hard-->\n$(jq '.hardSolved' leetcode_stats.json)<!--leetcode-hard-->/" README.md
+          easy=$(jq '.easySolved' leetcode_stats.json)
+          medium=$(jq '.mediumSolved' leetcode_stats.json)
+          hard=$(jq '.hardSolved' leetcode_stats.json)
+          sed -i "s/<!--leetcode-easy-->.*<!--leetcode-easy-->/<!--leetcode-easy-->${easy}<!--leetcode-easy-->/" README.md
+          sed -i "s/<!--leetcode-medium-->.*<!--leetcode-medium-->/<!--leetcode-medium-->${medium}<!--leetcode-medium-->/" README.md
+          sed -i "s/<!--leetcode-hard-->.*<!--leetcode-hard-->/<!--leetcode-hard-->${hard}<!--leetcode-hard-->/" README.md
 
       - name: Commit changes
         run: |
