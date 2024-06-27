@@ -1,26 +1,14 @@
-name: Update LeetCode Stats
-
-on:
-  schedule:
-    - cron: '0 * * * *' # Runs every hour
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3  # Update to version 3, which supports Node.js 20
 
       - name: Fetch LeetCode Stats
         id: fetch_leetcode
         run: |
-          curl -s "https://leetcode-api-faisalshohag.vercel.app/Priyanshu_Bhriguvanshi/" > leetcode_stats.json
-          echo "Easy solved: $(jq '.easySolved' leetcode_stats.json)"
-          echo "Medium solved: $(jq '.mediumSolved' leetcode_stats.json)"
-          echo "Hard solved: $(jq '.hardSolved' leetcode_stats.json)"
+          response=$(curl -sSf "https://leetcode-api-faisalshohag.vercel.app/Priyanshu_Bhriguvanshi/") || exit 1
+          echo "$response" > leetcode_stats.json || exit 1
 
       - name: Update README
         run: |
@@ -29,12 +17,12 @@ jobs:
           hard=$(jq '.hardSolved' leetcode_stats.json)
           sed -i "s/<!--leetcode-easy-->.*<!--leetcode-easy-->/<!--leetcode-easy-->${easy}<!--leetcode-easy-->/" README.md
           sed -i "s/<!--leetcode-medium-->.*<!--leetcode-medium-->/<!--leetcode-medium-->${medium}<!--leetcode-medium-->/" README.md
-          sed -i "s/<!--leetcode-hard-->.*<!--leetcode-hard-->/<!--leetcode-hard-->${hard}<!--leetcode-hard-->/" README.md
+          sed -i "s/<!--leetcode-hard-->.*<!--leetcode-hard-->/<!--leetcode-hard-->${hard}<!--leetcode-hard-->/" README.md || exit 1
 
       - name: Commit changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add README.md
-          git commit -m "Update LeetCode stats"
-          git push
+          git commit -m "Update LeetCode stats" || exit 1
+          git push || exit 1
