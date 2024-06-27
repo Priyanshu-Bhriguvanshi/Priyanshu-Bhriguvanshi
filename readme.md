@@ -6,7 +6,7 @@
 
 I'm a passionate developer with a strong focus on web development. I have experience in **C**, **JavaScript**, **React**, **HTML**, **CSS**, **Node.js**, **Express**, **MongoDB**, **MySQL**, **Git**, and **GitHub**. I love learning new technologies and applying them to solve real-world problems.
 
-- 🔭 I’m currently working on [YouTubeClone](https://github.com/Priyanshu-Bhriguvanshi/YouTubeClone)
+- 🔭 I’m currently working on YouTubeClone (Private)
 - 🌱 I’m currently learning to enhance my backend skills
 - 👯 I’m looking to collaborate with JavaScript developers
 - 💬 Ask me about backend skills
@@ -35,9 +35,7 @@ A project aimed at replicating the core features of YouTube, developed using mod
 
 You can check out my LeetCode profile [here](https://leetcode.com/u/Priyanshu_Bhriguvanshi/).
 
-- **Easy Problems**: <!--leetcode-easy-->0<!--leetcode-easy-->
-- **Medium Problems**: <!--leetcode-medium-->0<!--leetcode-medium-->
-- **Hard Problems**: <!--leetcode-hard-->0<!--leetcode-hard-->
+
 
 ## 📫 Connect with Me
 
