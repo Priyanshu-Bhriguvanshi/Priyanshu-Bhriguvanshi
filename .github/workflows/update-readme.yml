@@ -1,0 +1,34 @@
+name: Update LeetCode Stats
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch LeetCode Stats
+        id: fetch_leetcode
+        run: |
+          curl -s "https://leetcode-stats-api.herokuapp.com/u/Priyanshu_Bhriguvanshi" > leetcode_stats.json
+
+      - name: Update README
+        run: |
+          sed -i "s/<!--leetcode-easy-->.*<!--leetcode-easy-->/<!--leetcode-easy-->\n$(jq '.easySolved' leetcode_stats.json)<!--leetcode-easy-->/" README.md
+          sed -i "s/<!--leetcode-medium-->.*<!--leetcode-medium-->/<!--leetcode-medium-->\n$(jq '.mediumSolved' leetcode_stats.json)<!--leetcode-medium-->/" README.md
+          sed -i "s/<!--leetcode-hard-->.*<!--leetcode-hard-->/<!--leetcode-hard-->\n$(jq '.hardSolved' leetcode_stats.json)<!--leetcode-hard-->/" README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m "Update LeetCode stats"
+          git push
