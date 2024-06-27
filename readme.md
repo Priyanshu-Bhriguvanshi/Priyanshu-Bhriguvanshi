@@ -26,18 +26,9 @@ I'm a passionate developer with a strong focus on web development. I have experi
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)
 
-## 📊 GitHub Stats
-
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=Priyanshu-Bhriguvanshi&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Priyanshu-Bhriguvanshi&layout=compact&theme=radical)
-
-## 🔥 Contributions Streak
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Priyanshu-Bhriguvanshi&theme=radical)
-
 ## 💼 Projects
 
-### [YouTube Clone](https://github.com/Priyanshu-Bhriguvanshi/YouTubeClone)
+### [YouTube Clone](Private)
 A project aimed at replicating the core features of YouTube, developed using modern web technologies.
 
 ## 📈 LeetCode Profile
