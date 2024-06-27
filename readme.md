@@ -10,7 +10,7 @@ I'm a passionate developer with a strong focus on web development. I have experi
 - 🌱 I’m currently learning to enhance my backend skills
 - 👯 I’m looking to collaborate with JavaScript developers
 - 💬 Ask me about backend skills
-- 📫 How to reach me: singhpriyanshu144@gmail.com
+- 📫 How to reach me: ---
 
 ## 🛠️ Technologies & Tools
 
