@@ -28,7 +28,7 @@ I'm a passionate developer with a strong focus on web development. I have experi
 
 ## 💼 Projects
 
-### [YouTube Clone](Private)
+### YouTube Clone(Private)
 A project aimed at replicating the core features of YouTube, developed using modern web technologies.
 
 ## 📈 LeetCode Profile
